@@ -28,9 +28,7 @@ export default function index({ pokemons }) {
 
   const catchHandler = () => {
     catchPokemon(id).then((data) => {
-      const isCatched = data.data.success;
-
-      console.log(data);
+      const isCatched = data.data.catched;
 
       if (isCatched) {
         setOpen(true);
