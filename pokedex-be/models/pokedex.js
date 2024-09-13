@@ -9,6 +9,10 @@ const pokedexSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  pos: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Pokedex", pokedexSchema);

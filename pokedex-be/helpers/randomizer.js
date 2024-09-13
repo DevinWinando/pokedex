@@ -8,7 +8,19 @@ exports.primeNumber = () => {
 };
 
 exports.randomize = (max) => {
-  return Math.floor(Math.random() * max);
+  return Math.round(Math.random() * max);
+};
+
+exports.fibonacci = (pos) => {
+  if (pos < 0) {
+    return 0;
+  }
+
+  if (pos <= 1) {
+    return pos;
+  }
+
+  return this.fibonacci(pos - 1) + this.fibonacci(pos - 2);
 };
 
 const isPrime = (num) => {
